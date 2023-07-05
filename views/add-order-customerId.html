@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Customer ID</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Add Customer ID</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section id="form" class="bg-light py-5">
+                <div class="container">
+                    <p>Enter order details</p>
+                    <form action ="/add-order-customerId" method="post">
+                        <div class="form-group">
+                            <label for="customerId">Customer ID</label>
+                            <input type="number" id="customerId" name="customerId" class="form-control" value="{{ customerId }}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ order.customerName }}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{{ order.customerName }}</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section id="order-product" class="mt-4">
+                {% if order %} 
+                <h2>Customer Name</h2>
+                {{ order.customerName }}
+
+                <h2>Order Date</h2>
+                {{ order.orderDate }}
+
+                <h2>Product Names</h2>
+                {{ product.name }}
+                {% else %} 
+                Could not find order.
+                {% endif %}
+            </section>
+        </main>
+    </body>
+</html>
